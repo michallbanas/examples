@@ -1,0 +1,63 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "# Spread Operator vs Rest Parameter"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "Spread Operator: allows iterables ( arrays / objects / strings) to be expanded into single arguments/elements."
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const bistro = {\n    name: 'Foodstock',\n    employees: [\"John\", \"Jane\", \"Jack\", \"Greg\"],\n}\n\nconst newEmployees = [\"Mary\", \"Molly\", ...bistro.employees];\nconsole.log(newEmployees);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "[ 'Mary', 'Molly', 'John', 'Jane', 'Jack', 'Greg' ]",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "Rest Parameter: collects all remaining elements into an array."
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const bistro = {\n    name: 'Foodstock',\n    employees: [\"John\", \"Jane\", \"Jack\", \"Greg\"]\n}\n\nconst [John, ...others] = bistro.employees;\nconsole.log(others);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "[ 'Jane', 'Jack', 'Greg' ]",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
