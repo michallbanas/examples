@@ -33,4 +33,15 @@ console.log(copyEmployees);
 const people = [...bistro.employees, ...bistro.owners];
 console.log(people); 
 
+// Join 2 arrays with spread operator
+
+const yeme = ['bread', 'curryPasta'];
+const lidl = ['rice', 'zucchini', 'tofu'];
+
+const shoppingList = [...yeme, ...lidl];
+
+console.log(shoppingList);
+
+
+
 // + real world example in destructing/example.js

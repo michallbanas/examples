@@ -53,5 +53,3 @@ const ingredients = [
 
 const pizza = restaurant.orderPizza(...ingredients);
 console.log(pizza);
-
-
