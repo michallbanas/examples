@@ -25,10 +25,6 @@ const restaurant = {
 
     orderDelivery: function({burgersIndex, mainMenuIndex, time, adress}) {
         return(`Yay! Order received. ${this.burgers[burgersIndex]} and ${this.mainMenu[mainMenuIndex]} will be delivered to ${adress} in ${time} minutes`);
-    },
-
-    orderPizza: function(ing1, ing2, ing3){
-        return(`Here is your amazing pizza with ${ing1}, ${ing2} and ${ing3}`);
     }
 }
 
@@ -43,13 +39,11 @@ const order = restaurant.orderDelivery({
 
 console.log(order);
 
-// Pizza
+// for of loop and destructuring
 
-const ingredients = [
-    prompt("Let's make your pizza! Ingredient 1?"),
-    prompt("Ingredient 2?"),
-    prompt("Ingredient 3?")
-]
+const menu = [...restaurant.mainMenu, ...restaurant.burgers]; // spread operator
+// console.log(menu); // ['Goulash', 'Bowl', 'Ravioli', 'Mexico', 'Green', 'Balans']
 
-const pizza = restaurant.orderPizza(...ingredients);
-console.log(pizza);
+for (const [item, element] of menu.entries()) { // for of loop + destructuring + entries()
+    console.log(`${item + 1}: ${element}`);
+}
