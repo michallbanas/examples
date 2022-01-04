@@ -1,6 +1,6 @@
 "use strict";
 
-function vypocetNajmu(byvanie, energie){
+const vypocetNajmu = (byvanie, energie) => {
     const byvanieDokopy = byvanie * 12
     console.log(byvanieDokopy)
 
@@ -19,6 +19,3 @@ const naOsobu = najom / 2;
 const naDen = Math.round(najom / 365);
 
 console.log(`Spolu zaplatia za rok ${najom}€. Na osobu teda ${naOsobu}€ a na deň ${naDen}€`);  
-
-
-
