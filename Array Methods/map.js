@@ -18,3 +18,10 @@ const productsSale = productsOriginal.map(product => {
 })
 
 console.log("Ceny po zľave:", productsSale,"Ceny pred zľavou:", productsOriginal)
+
+// Simple example
+
+const sums = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
+
+const newSum = sums.map(sum => sum + '€');
+console.log(newSum);

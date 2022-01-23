@@ -1,6 +1,6 @@
 'use string';
 
-const niceString = 'a+very+nice+string';
+const niceString = 'Toto+je+veľmi+dlhá+response+ktorú+sme+dostali+zo+zastaralej+API+a+vyzera+to+hrozne';
 console.log(niceString.split('+'));
 
 const myName = 'Michal Banas';

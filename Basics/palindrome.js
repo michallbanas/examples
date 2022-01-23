@@ -1,19 +1,19 @@
 "use strict"
 
-function palindrome(slovo){
+function palindrome(veta){
 
-    const valid = /[\W_]/g // regex to remove non-alphanumeric characters
-    const malePismena = slovo.toLowerCase().replace(valid, '') // remove non-alphanumeric characters and convert to lowercase
-    const malePismenaReverse = malePismena.split('').reverse().join('') // reverse the string
+    
+    const malePismena = veta.toLowerCase().replaceAll(' ', '')
+    const malePismenaReverse = malePismena.split(' ').reverse().join('') // reverse the string
 
     if (malePismena === malePismenaReverse) {
 
-        const spravne = `"${slovo}" je palindrom`
+        const spravne = `"${veta}" je palindrom`
         return spravne
 
     } else {
 
-        const nespravne = `"${slovo}" nie je palindrom`
+        const nespravne = `"${veta}" nie je palindrom`
         return nespravne
 
     }
