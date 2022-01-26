@@ -19,3 +19,10 @@ const salaries = [
 
 salaries.sort((a, b) => a.salary - b.salary);
 console.log(salaries[0].name);
+
+const basicNumbers = [6, 8, 25, 1, 11, 2, 8]
+// const basicSort = basicNumbers.sort()
+const newSort = basicNumbers.sort((a, b) => a - b)
+
+// console.log(basicSort);
+console.log(newSort);

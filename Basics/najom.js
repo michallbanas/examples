@@ -19,3 +19,5 @@ const naOsobu = najom / 2;
 const naDen = Math.round(najom / 365);
 
 console.log(`Spolu zaplatia za rok ${najom}€. Na osobu teda ${naOsobu}€ a na deň ${naDen}€`);  
+
+

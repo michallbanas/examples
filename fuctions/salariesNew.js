@@ -36,7 +36,7 @@ const january = {
     rent: 260,
     loan: 229,
     others: 26,
-    foodExpenses: [44, 47, 66],
+    foodExpenses: [44, 47, 66, 8],
     limit: 10,
     weekDays: 7
 }
