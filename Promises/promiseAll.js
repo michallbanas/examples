@@ -9,14 +9,16 @@ const url = 'http://www.omdbapi.com/';
 const movies = ['Inception', 'The Dark Knight', 'The Godfather', 'Pulp Fiction', 'The Good, the Bad and the Ugly'];
 
 const getMovies = async () => {
+
     const promises = movies.map(movie => 
-        fetch(`${url}?t=${movie}&apikey=${apikey}`));
+        fetch(`${url}?t=${movie}&apikey=${apikey}`));    
+
     const responses = await Promise.all(promises);
     const data = await Promise.all(responses.map(response => response.json()))
-    const everyResponse = responses.every(response => response.ok)
-    const someResponse = responses.some(response => !response.ok)
 
-    if (everyResponse || someResponse) {
+    const everyResponse = responses.every(response => response.status === 200);
+
+    if (everyResponse) {
 
         const title = data.map(movie => movie.Title);
         const status = responses.map(response => response.status)
@@ -27,7 +29,13 @@ const getMovies = async () => {
             }
         });
         console.log(merged);
-    } 
+    } else {
+        
+        const merge = responses.map(response => [response.status, response.url]);
+        console.log(merge);
+        
+    }
+
     return data;
 }
 
